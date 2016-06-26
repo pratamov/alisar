@@ -1,0 +1,132 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <GridLayout
+                android:layout_gravity="center_vertical"
+                android:id="@+id/batery_precentage"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:orientation="horizontal"
+                android:columnCount="8"
+                android:rowCount="8"
+                android:background="@color/colorAccent" >
+            </GridLayout>
+
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/progressbar"
+                android:layout_width="@dimen/battery_width"
+                android:layout_height="@dimen/battery_height"
+                android:src="@drawable/ic_battery"
+                android:scaleType="fitXY"/>
+
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/battery_padding_top"
+                android:paddingLeft="@dimen/battery_padding_left">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30sp"
+                    android:text="50%"
+                    />
+
+                <TextView
+                    android:id="@+id/consumption_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="{faw-bolt} 60 WH"
+                    />
+
+                <TextView
+                    android:id="@+id/budget_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="{faw-money} IDR 60.000"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal" >
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="left"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Yesterday"
+                    style="?android:attr/listSeparatorTextViewStyle"
+                    android:layout_gravity="center_horizontal"
+                    />
+                <TextView
+                    android:id="@+id/consumption_yesterday"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="{faw-bolt} 60 WH"
+                    android:layout_gravity="center_horizontal"
+                    />
+                <TextView
+                    android:id="@+id/budget_yesterday"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="{faw-money} IDR 60.000"
+                    android:layout_gravity="center_horizontal"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="right"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Saving"
+                    style="?android:attr/listSeparatorTextViewStyle"
+                    android:layout_gravity="center_horizontal"
+                    />
+                <TextView
+                    android:id="@+id/consumption_saving"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="{faw-bolt} 60 WH"
+                    android:layout_gravity="center_horizontal"
+                    />
+                <TextView
+                    android:id="@+id/budget_saving"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="{faw-money} IDR 60.000"
+                    android:layout_gravity="center_horizontal"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</FrameLayout>
