@@ -1,4 +1,4 @@
-package com.dual.ideaction.alisar;
+package com.dual.ideaction.alisar.fragments;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.dual.ideaction.alisar.TerminalFragment.OnListFragmentInteractionListener;
+import com.dual.ideaction.alisar.R;
 import com.dual.ideaction.alisar.dummy.DummyContent.DummyItem;
 
 import java.util.List;
@@ -17,9 +17,9 @@ public class MyTerminalRecyclerViewAdapter extends RecyclerView.Adapter<MyTermin
         void onItemClick(DummyItem item);
     }
     private final List<DummyItem> mValues;
-    private final OnListFragmentInteractionListener mListener;
+    private final TerminalFragment.OnListFragmentInteractionListener mListener;
 
-    public MyTerminalRecyclerViewAdapter(List<DummyItem> items, OnListFragmentInteractionListener listener) {
+    public MyTerminalRecyclerViewAdapter(List<DummyItem> items, TerminalFragment.OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }

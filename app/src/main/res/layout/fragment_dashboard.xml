@@ -2,12 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DashboardFragment">
+    tools:context=".fragments.DashboardFragment">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <RelativeLayout
+            android:layout_marginBottom="50dp"
             android:layout_gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -63,10 +64,17 @@
 
         </RelativeLayout>
 
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="Yesterday"
+            android:gravity="center"
+            />
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
             android:orientation="horizontal" >
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -74,22 +82,23 @@
                 android:layout_weight="1"
                 android:layout_gravity="left"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:text="Yesterday"
+                    android:text="Consumption"
                     style="?android:attr/listSeparatorTextViewStyle"
                     android:layout_gravity="center_horizontal"
                     />
                 <TextView
-                    android:id="@+id/consumption_yesterday"
+                    android:id="@+id/consumption_wh_yesterday"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:text="{faw-bolt} 60 WH"
                     android:layout_gravity="center_horizontal"
                     />
                 <TextView
-                    android:id="@+id/budget_yesterday"
+                    android:id="@+id/consumption_idr_yesterday"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:text="{faw-money} IDR 60.000"
@@ -111,14 +120,85 @@
                     android:layout_gravity="center_horizontal"
                     />
                 <TextView
-                    android:id="@+id/consumption_saving"
+                    android:id="@+id/saving_wh_yesterday"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:text="{faw-bolt} 60 WH"
                     android:layout_gravity="center_horizontal"
                     />
                 <TextView
-                    android:id="@+id/budget_saving"
+                    android:id="@+id/saving_idr_yesterday"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="{faw-money} IDR 60.000"
+                    android:layout_gravity="center_horizontal"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="Today"
+            android:gravity="center"
+            />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:orientation="horizontal" >
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="left"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Consumption"
+                    style="?android:attr/listSeparatorTextViewStyle"
+                    android:layout_gravity="center_horizontal"
+                    />
+                <TextView
+                    android:id="@+id/consumption_wh_today"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="{faw-bolt} 60 WH"
+                    android:layout_gravity="center_horizontal"
+                    />
+                <TextView
+                    android:id="@+id/consumption_idr_today"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="{faw-money} IDR 60.000"
+                    android:layout_gravity="center_horizontal"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="right"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Saving"
+                    style="?android:attr/listSeparatorTextViewStyle"
+                    android:layout_gravity="center_horizontal"
+                    />
+                <TextView
+                    android:id="@+id/saving_wh_today"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="{faw-bolt} 60 WH"
+                    android:layout_gravity="center_horizontal"
+                    />
+                <TextView
+                    android:id="@+id/saving_idr_today"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:text="{faw-money} IDR 60.000"

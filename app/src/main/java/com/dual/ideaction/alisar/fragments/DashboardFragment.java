@@ -1,4 +1,4 @@
-package com.dual.ideaction.alisar;
+package com.dual.ideaction.alisar.fragments;
 
 import android.content.Context;
 import android.net.Uri;
@@ -8,7 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class LoginFragment extends Fragment {
+import com.dual.ideaction.alisar.R;
+
+/**
+ * Halaman depan aplikasi. Berisi overview plan budget yang dipakai.
+ */
+public class DashboardFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -17,11 +22,10 @@ public class LoginFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public LoginFragment() {
+    public DashboardFragment() {
     }
-
-    public static LoginFragment newInstance(String param1, String param2) {
-        LoginFragment fragment = new LoginFragment();
+    public static DashboardFragment newInstance(String param1, String param2) {
+        DashboardFragment fragment = new DashboardFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -41,7 +45,7 @@ public class LoginFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_logout, container, false);
+        return inflater.inflate(R.layout.fragment_dashboard, container, false);
     }
 
     public void onButtonPressed(Uri uri) {

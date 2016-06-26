@@ -7,9 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 
 public class LoadingActivity extends AppCompatActivity {
 
-    private final int SPLASH_DISPLAY_LENGTH = 2000;
+    private final int SPLASH_DISPLAY_LENGTH = 500;
 
-    /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -18,11 +17,15 @@ public class LoadingActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent mainIntent = new Intent(LoadingActivity.this, MainActivity.class);
+                Intent mainIntent = new Intent(LoadingActivity.this, LoginActivity.class);
                 LoadingActivity.this.startActivity(mainIntent);
                 LoadingActivity.this.finish();
             }
         }, SPLASH_DISPLAY_LENGTH);
+    }
+
+    public static String getSession(){
+        return "";
     }
 
 }

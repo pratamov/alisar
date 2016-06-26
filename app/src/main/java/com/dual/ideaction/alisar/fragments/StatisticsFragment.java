@@ -1,4 +1,4 @@
-package com.dual.ideaction.alisar;
+package com.dual.ideaction.alisar.fragments;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
+import com.dual.ideaction.alisar.R;
 import com.dual.ideaction.alisar.extend.MyMarkerView;
 import com.dual.ideaction.alisar.extend.SimpleFragment;
 import com.github.mikephil.charting.charts.BarChart;

@@ -1,4 +1,4 @@
-package com.dual.ideaction.alisar;
+package com.dual.ideaction.alisar.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,10 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.dual.ideaction.alisar.R;
 import com.dual.ideaction.alisar.dummy.DummyContent;
 import com.dual.ideaction.alisar.dummy.DummyContent.DummyItem;
-
-import java.util.List;
 
 public class TerminalFragment extends Fragment {
 

@@ -16,7 +16,7 @@
             android:title="Manage Room Electricity" />
         <item
             android:id="@+id/nav_statistics"
-            android:icon="@drawable/ic_statistics"
+            android:icon="@drawable/ic_insert_chart"
             android:title="View Statistics Usage" />
     </group>
 
@@ -24,7 +24,7 @@
         <menu>
             <item
                 android:id="@+id/nav_profile"
-                android:icon="@drawable/avatar"
+                android:icon="@drawable/ic_user"
                 android:title="Profile" />
             <item
                 android:id="@+id/nav_logout"

@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:paddingTop="100dp">
 
     <ImageView android:id="@+id/splashscreen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="400px"
+        android:layout_height="400px"
         android:src="@drawable/ic_logo"
-        android:maxWidth="50px"
-        android:maxHeight="50px"
         android:layout_gravity="center"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Alisar"
+        android:textStyle="bold"
         android:textSize="30sp"
         android:layout_gravity="center"/>
 
