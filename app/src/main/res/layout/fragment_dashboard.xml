@@ -94,14 +94,14 @@
                     android:id="@+id/consumption_wh_yesterday"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:text="{faw-bolt} 60 WH"
+                    android:text="{faw-bolt} 13.34 kWh"
                     android:layout_gravity="center_horizontal"
                     />
                 <TextView
                     android:id="@+id/consumption_idr_yesterday"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:text="{faw-money} IDR 60.000"
+                    android:text="{faw-money} IDR 18,035.68"
                     android:layout_gravity="center_horizontal"
                     />
             </LinearLayout>
@@ -123,14 +123,14 @@
                     android:id="@+id/saving_wh_yesterday"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:text="{faw-bolt} 60 WH"
+                    android:text="{faw-bolt} 6.66 kWh"
                     android:layout_gravity="center_horizontal"
                     />
                 <TextView
                     android:id="@+id/saving_idr_yesterday"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:text="{faw-money} IDR 60.000"
+                    android:text="{faw-money} IDR 9,004.32"
                     android:layout_gravity="center_horizontal"
                     />
             </LinearLayout>
@@ -165,14 +165,14 @@
                     android:id="@+id/consumption_wh_today"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:text="{faw-bolt} 60 WH"
+                    android:text="{faw-bolt} 3.4 kWh"
                     android:layout_gravity="center_horizontal"
                     />
                 <TextView
                     android:id="@+id/consumption_idr_today"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:text="{faw-money} IDR 60.000"
+                    android:text="{faw-money} IDR 4.596,8"
                     android:layout_gravity="center_horizontal"
                     />
             </LinearLayout>
@@ -186,7 +186,7 @@
                 <TextView
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:text="Saving"
+                    android:text="Remaining"
                     style="?android:attr/listSeparatorTextViewStyle"
                     android:layout_gravity="center_horizontal"
                     />
@@ -194,19 +194,17 @@
                     android:id="@+id/saving_wh_today"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:text="{faw-bolt} 60 WH"
+                    android:text="{faw-bolt} 26.6 kWh"
                     android:layout_gravity="center_horizontal"
                     />
                 <TextView
                     android:id="@+id/saving_idr_today"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:text="{faw-money} IDR 60.000"
+                    android:text="{faw-money} IDR 35,963.2"
                     android:layout_gravity="center_horizontal"
                     />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-
-
 </FrameLayout>

@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.dual.ideaction.alisar.dummy.DummyContent;
 import com.dual.ideaction.alisar.fragments.BudgetFragment;
@@ -216,5 +217,9 @@ public class MainActivity extends AppCompatActivity
         Intent mainIntent = new Intent(MainActivity.this, LoginActivity.class);
         MainActivity.this.startActivity(mainIntent);
         MainActivity.this.finish();
+    }
+
+    public void setBudget(View v){
+        
     }
 }
