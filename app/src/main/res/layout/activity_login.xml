@@ -18,12 +18,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp">
-        <EditText android:id="@+id/input_email"
+        <EditText android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:text="andre.pratama.0001@gmail.com"
-            android:hint="Email" />
+            android:inputType="text"
+            android:text="admin"
+            android:hint="Username" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -31,11 +31,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp">
-        <EditText android:id="@+id/input_password"
+        <EditText android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:text="password"
+            android:text="admin"
             android:hint="Password"/>
     </android.support.design.widget.TextInputLayout>
 

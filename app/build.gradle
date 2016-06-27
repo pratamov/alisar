@@ -24,6 +24,8 @@ android {
         exclude 'META-INF/LICENSE'
         exclude 'META-INF/LICENSE.txt'
         exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'META-INF/io.netty.versions.properties'
     }
 }
 
@@ -38,5 +40,5 @@ dependencies {
     compile 'com.github.PhilJay:MPAndroidChart:v2.2.5'
     compile 'com.android.support:recyclerview-v7:23.4.0'
     compile 'com.android.support:cardview-v7:23.1.1'
-
+    compile 'biz.paluch.redis:lettuce:3.4.3.Final'
 }

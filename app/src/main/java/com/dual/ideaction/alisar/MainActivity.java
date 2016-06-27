@@ -15,6 +15,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Switch;
+import android.widget.Toast;
 
 import com.dual.ideaction.alisar.dummy.DummyContent;
 import com.dual.ideaction.alisar.fragments.BudgetFragment;
@@ -24,7 +26,15 @@ import com.dual.ideaction.alisar.fragments.ProfileFragment;
 import com.dual.ideaction.alisar.fragments.StatisticsFragment;
 import com.dual.ideaction.alisar.fragments.SwitchFragment;
 import com.dual.ideaction.alisar.fragments.TerminalFragment;
+import com.dual.ideaction.alisar.object.Consumer;
+import com.dual.ideaction.alisar.object.Terminal;
+import com.dual.ideaction.alisar.object.User;
+import com.google.common.base.Objects;
 import com.mikepenz.iconics.context.IconicsContextWrapper;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity
         implements
@@ -46,6 +56,7 @@ public class MainActivity extends AppCompatActivity
     Fragment fragment = null;
     String title = "Home";
     int fragment_id = FRAGMENT_DASHBOARD;
+    User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +75,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         setFragmentDashboard();
-
+        user = User.getInstance();
     }
 
     @Override
@@ -75,10 +86,9 @@ public class MainActivity extends AppCompatActivity
         } else {
             if (fragment_id == MainActivity.FRAGMENT_CONSUMMER) {
                 setFragmentTerminal();
-            } else if (fragment_id == MainActivity.FRAGMENT_DASHBOARD){
+            } else if (fragment_id == MainActivity.FRAGMENT_DASHBOARD) {
                 super.onBackPressed();
-            }
-            else {
+            } else {
                 setFragmentDashboard();
             }
         }
@@ -138,7 +148,11 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onListFragmentInteraction(DummyContent.DummyItem item) {
-        setFragmentConsummer();
+        Terminal terminal = item.terminal;
+        if (terminal.getConsumers().size() >= 3){
+            setFragmentConsummer(terminal.getConsumers());
+        }
+
     }
 
     private void setFragmentDashboard() {
@@ -177,8 +191,39 @@ public class MainActivity extends AppCompatActivity
                 .commit();
     }
 
-    private void setFragmentConsummer() {
-        fragment = new ConsummerFragment();
+    private void setFragmentConsummer(HashMap<String, Consumer> consumers) {
+        Iterator it = consumers.entrySet().iterator();
+        String consumerId1 = "";
+        String consumerName1 = "";
+        boolean consumerSwitch1 = false;
+        String consumerId2 = "";
+        String consumerName2 = "";
+        boolean consumerSwitch2 = false;
+        String consumerId3 = "";
+        String consumerName3 = "";
+        boolean consumerSwitch3 = false;
+        int counter = 1;
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry)it.next();
+            Consumer consumer = (Consumer) pair.getValue();
+            if (counter == 1){
+                consumerId1 = (String) pair.getKey();
+                consumerName1 = consumer.getConsumerName();
+                consumerSwitch1 = consumer.isConsumerSwitch();
+            }
+            else if (counter == 2){
+                consumerId2 = (String) pair.getKey();
+                consumerName2 = consumer.getConsumerName();
+                consumerSwitch2 = consumer.isConsumerSwitch();
+            }
+            else{
+                consumerId3 = (String) pair.getKey();
+                consumerName3 = consumer.getConsumerName();
+                consumerSwitch3 = consumer.isConsumerSwitch();
+            }
+            counter++;
+        }
+        fragment = ConsummerFragment.newInstance(consumerId1, consumerId2, consumerId3, consumerName1, consumerName2, consumerName3, consumerSwitch1, consumerSwitch2, consumerSwitch3);
         fragment_id = MainActivity.FRAGMENT_CONSUMMER;
         getSupportActionBar().setTitle("Electronic Devices");
         FragmentManager fragmentManager =
@@ -213,13 +258,13 @@ public class MainActivity extends AppCompatActivity
                 .commit();
     }
 
-    private void setFragmentLogin(){
+    private void setFragmentLogin() {
         Intent mainIntent = new Intent(MainActivity.this, LoginActivity.class);
         MainActivity.this.startActivity(mainIntent);
         MainActivity.this.finish();
     }
 
-    public void setBudget(View v){
-        
+    public void setBudget(View v) {
+        Toast.makeText(this, "click", Toast.LENGTH_SHORT);
     }
 }

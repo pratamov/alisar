@@ -11,7 +11,7 @@ import com.dual.ideaction.alisar.dummy.DummyContent.DummyItem;
 
 import java.util.List;
 
-public class MyTerminalRecyclerViewAdapter extends RecyclerView.Adapter<MyTerminalRecyclerViewAdapter.ViewHolder> {
+public class  MyTerminalRecyclerViewAdapter extends RecyclerView.Adapter<MyTerminalRecyclerViewAdapter.ViewHolder> {
 
     public interface OnItemClickListener {
         void onItemClick(DummyItem item);
